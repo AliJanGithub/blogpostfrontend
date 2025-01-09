@@ -18,7 +18,7 @@ const UseGetPost = () => {
     try { 
         setLoading(true)
       
-      const response = await fetch("http://localhost:8000/post/getpost", {
+      const response = await fetch(`${URL}/post/getpost`, {
         method: "GET",
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),

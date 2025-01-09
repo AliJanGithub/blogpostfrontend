@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { URL } from "../constants";
 
 const usegetComments=()=>{
 
@@ -10,7 +11,7 @@ const usegetComments=()=>{
         try {
             setLoading(true);
             setError(null);
-            const response = await fetch(`http://localhost:8000/post/comments/${id}`,{
+            const response = await fetch(`${URL}/post/comments/${id}`,{
                 method:'GET',
                 headers:{
                     'Authorization': `Bearer ${localStorage.getItem("token")}`,

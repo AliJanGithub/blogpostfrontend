@@ -73,7 +73,7 @@ const useAuth = () => {
     };
     const getUser=async()=>{
         try {
-            const response= await fetch("http://localhost:8000/auth/getuser",{
+            const response= await fetch(`${URL}/auth/getuser`,{
                 headers:{
                     'Authorization': `Bearer ${localStorage.getItem("token")}`,
                 },

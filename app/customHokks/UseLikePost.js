@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { URL } from "../constants";
 
 const UseLikePost = () => {
   const [len,stelen]=useState(0)
     const likePostFunction = async (postId) => {
       try {
-        const response = await fetch(`http://localhost:8000/post/like/${postId}`, {
+        const response = await fetch(`${URL}/post/like/${postId}`, {
           method: "POST",
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
